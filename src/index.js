@@ -61,8 +61,13 @@ export function pitch(request) {
   worker.compiler.apply(new SingleEntryPlugin(this.context, `!!${request}`, 'main'));
 
   const subCache = `subcache ${__dirname} ${request}`;
+  const ngToolsWebpackPluginInstance = this._compilation._ngToolsWebpackPluginInstance;
 
   worker.compiler.plugin('compilation', (compilation) => {
+    // Pass the ngtools/webpack plugin to the child compilation so that TS files
+    // can be properly compiled. Hopefully we can get rid of this hack eventually.
+    compilation._ngToolsWebpackPluginInstance = ngToolsWebpackPluginInstance;
+
     if (compilation.cache) {
       if (!compilation.cache[subCache]) compilation.cache[subCache] = {};
 

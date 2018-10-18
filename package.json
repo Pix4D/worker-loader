@@ -1,5 +1,5 @@
 {
-  "name": "worker-loader",
+  "name": "@pix4d/worker-loader",
   "version": "2.0.0",
   "description": "worker loader module for webpack",
   "license": "MIT",
@@ -48,13 +48,13 @@
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
-    "@webpack-contrib/defaults": "^2.4.0",
+    "@webpack-contrib/defaults": "^2.6.0",
     "@webpack-contrib/eslint-config-webpack": "^2.0.4",
     "babel-cli": "^6.0.0",
     "babel-jest": "^21.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.0.0",
     "babel-polyfill": "^6.0.0",
-    "babel-preset-env": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
     "conventional-github-releaser": "^3.1.0",
     "cross-env": "^5.0.0",
     "del": "^3.0.0",
@@ -68,8 +68,8 @@
     "lint-staged": "^4.0.0",
     "nsp": "^2.6.0",
     "pre-commit": "^1.0.0",
-    "prettier": "^1.13.4",
-    "standard-version": "^4.0.0",
+    "prettier": "^1.14.3",
+    "standard-version": "^4.4.0",
     "webpack": "^3.0.0"
   },
   "keywords": [
